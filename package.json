@@ -1,0 +1,10 @@
+{
+	"scripts": {
+		"build": "npx tsc && cd extension && pnpm web-ext build --overwrite-dest"
+	},
+	"devDependencies": {
+		"@types/chrome": "^0.1.37",
+		"typescript": "^5.9.3",
+		"web-ext": "^9.4.0"
+	}
+}
