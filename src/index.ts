@@ -41,7 +41,7 @@ const buttons: {
             ...endPos,
         };
         explorer.opts.onTick(explorer);
-        explorer.pos = startPos;
+        explorer.pos = {...startPos};
         for (const coin of explorer.objects) {
             coin.got = false;
         }
@@ -49,7 +49,7 @@ const buttons: {
     }
 }]
 
-const startPos = explorer.pos;
+const startPos = {...explorer.pos};
 
 if (key in localStorage) {
     const data: SaveData = JSON.parse(localStorage[key]);
