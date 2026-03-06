@@ -1,5 +1,6 @@
 export {};
 
+const explore = document.getElementById("explore");
 const explorer = window.explorer;
 const key = "hoverboardProgress";
 const endPos = {
@@ -67,7 +68,10 @@ for (const [idx, button] of buttons.entries()) {
     li.style.cursor = "pointer";
     const el = document.createElement("a");
     el.innerText = button.text;
-    el.addEventListener("click", button.onClick);
+    el.addEventListener("click", e => {
+        button.onClick.call(this, e);
+        explore.focus();
+    });
     li.appendChild(el);
     extraButtons.appendChild(li);
     if (idx !== buttons.length - 1) {

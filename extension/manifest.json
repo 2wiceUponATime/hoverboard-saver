@@ -1,12 +1,14 @@
 {
   "manifest_version": 3,
   "name": "Hoverboard Progress Saver",
-  "version": "1.0",
+  "version": "1.1.0",
 
   "description": "Saves progress on xkcd's Hoverboard (https://xkcd.com/1608/).",
 
   "icons": {
-    "48": "icons/border-48.png"
+    "48": "icons/hoverboard-48.png",
+    "128": "icons/hoverboard-128.png",
+    "256": "icons/hoverboard-256.png"
   },
 
   "content_scripts": [
@@ -18,7 +20,7 @@
   "web_accessible_resources": [
     {
       "resources": ["dist/index.js"],
-      "matches": ["*://xkcd.com/1608/"]
+      "matches": ["*://xkcd.com/*"]
     }
   ]
 }

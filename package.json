@@ -1,9 +1,16 @@
 {
 	"scripts": {
-		"build": "npx tsc && cd extension && pnpm web-ext build --overwrite-dest"
+		"watch": "tsc --watch",
+		"web-ext-dev": "web-ext --source-dir extension run",
+		"web-ext-dev:chromium": "web-ext --source-dir extension run --target=chromium",
+		"dev:firefox": "concurrently 'pnpm watch' 'pnpm web-ext-dev'",
+		"dev:chromium": "concurrently 'pnpm watch' 'pnpm web-ext-dev:chromium'",
+		"build": "tsc",
+		"build:firefox": "tsc && web-ext --source-dir extension build --overwrite-dest"
 	},
 	"devDependencies": {
 		"@types/chrome": "^0.1.37",
+		"concurrently": "^9.2.1",
 		"typescript": "^5.9.3",
 		"web-ext": "^9.4.0"
 	}
