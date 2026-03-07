@@ -1,6 +1,6 @@
 # Hoverboard Progress Saver
 
-A browser extension that saves position and coins on [xkcd: Hoverboard](https://xkcd.com/1608/).
+A browser extension that saves progress on [xkcd: Hoverboard](https://xkcd.com/1608/).
 
 ## Table of Contents
 * [Hoverboard Progress Saver](#hoverboard-progress-saver)
